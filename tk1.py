@@ -1,5 +1,6 @@
 import tkinter
 # 添加测试
+#添加了帐号
 app=tkinter.Tk()
 app.title("hello,tkinter")
 thelabel=tkinter.Label(app,text="label.txt",fg="blue",bg="red")
