@@ -1,13 +1,26 @@
-import tkinter
-# 添加测试
-#添加了帐号
-#commit之后要push
-#在本机进行测试
-#重新进行了测试
-app=tkinter.Tk()
-app.title("hello,tkinter")
-thelabel=tkinter.Label(app,text="label.txt",fg="blue",bg="red")
-thebutton=tkinter.Button(app,text="thebutton",fg="blue",bg="red")
-thebutton.pack(padx=10,pady=10)
-thelabel.pack(padx=10,pady=10)
+import tkinter as tk
+
+class Application(tk.Frame):
+    def __init__(self, master=None):
+        super().__init__(master)
+        self.pack()
+        self.create_widgets()
+
+    def create_widgets(self):
+        self.hi_there = tk.Button(self)
+        self.hi_there["text"] = "Hello World\n(click me)"
+        self.hi_there["command"] = self.say_hi
+        self.hi_there.pack(side="left")
+
+        self.quit = tk.Button(self, text="QUIT", fg="red",
+                              command=root.destroy)
+        self.quit.pack(side="bottom",padx=10,pady=10)
+
+    def say_hi(self):
+        print("hi there, everyone!")
+
+root = tk.Tk()
+root.title("")
+app = Application(master=root)
+
 app.mainloop()
