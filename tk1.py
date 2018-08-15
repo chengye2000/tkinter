@@ -3,6 +3,7 @@ import tkinter
 #添加了帐号
 #commit之后要push
 #在本机进行测试
+#重新进行了测试
 app=tkinter.Tk()
 app.title("hello,tkinter")
 thelabel=tkinter.Label(app,text="label.txt",fg="blue",bg="red")
